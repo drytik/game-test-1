@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwh8aadlb2mfh"]
+
+[ext_resource type="Script" uid="uid://cy2evv0frefno" path="res://scenes/singletons/game/game.gd" id="1_v0xt3"]
+[ext_resource type="PackedScene" uid="uid://cd0mnw4rglpm2" path="res://scenes/farm_scene/farm_scene.tscn" id="2_dunq3"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_v0xt3")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="FarmScene" parent="TabContainer" instance=ExtResource("2_dunq3")]
+layout_mode = 2
+metadata/_tab_index = 0
