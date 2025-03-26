@@ -1,14 +1,14 @@
 extends Control
 
-@onready var seeds : int = Game.ref.data.resources.seeds
-
 func _ready() -> void:
 	($Button as Button).pressed.connect(_on_button_pressed)
-	
-func _process(delta: float) -> void:
-	pass
+	SeedsGenerator.ref.seed_generated.connect(_update_label)
+	$Label.text = "Seeds : 0"
 
+func _update_label() -> void: 
+	$Label.text = "Seeds: %s" %Game.ref.data.resources.seeds
+	
 func _on_button_pressed() -> void: 
-		seeds += 5
-		print(seeds)
-		$Label.text = "Seeds: %s" %seeds
+	Game.ref.data.resources.seeds += 5
+	$Label.text = "Seeds: %s" %Game.ref.data.resources.seeds
+		
