@@ -12,7 +12,7 @@ func _init() -> void:
 		queue_free()
 
 #signal when the seeds are generated
-signal seed_generated
+signal produced
 
 #defines how many "ticks" between seeds production 
 var _cycle_duration : float = 2.0
@@ -34,8 +34,8 @@ func _progress_cycle() -> void:
 	
 	if _cycle_progression >= _cycle_duration:
 		_generate()
-		
+		_cycle_progression -= _cycle_duration
+	
 func _generate() -> void: 
 	Game.ref.data.resources.seeds += _production
-	_cycle_progression -= _cycle_duration
-	seed_generated.emit()
+	produced.emit()

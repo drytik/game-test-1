@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg47ap2w34rkh"]
+
+[ext_resource type="Script" uid="uid://b6lda55f1dy6e" path="res://scenes/singletons/water_generator/water_generator.gd" id="1_ewn63"]
+
+[node name="WaterGenerator" type="Node"]
+script = ExtResource("1_ewn63")
