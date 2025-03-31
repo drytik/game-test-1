@@ -33,4 +33,3 @@ func _progress_cycle() -> void:
 func _generate() -> void: 
 	Game.ref.data.resources.water += 1
 	produced.emit()
-	print("water produced")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwh8aadlb2mfh"]
+[gd_scene load_steps=6 format=3 uid="uid://bwh8aadlb2mfh"]
 
 [ext_resource type="Script" uid="uid://cy2evv0frefno" path="res://scenes/singletons/game/game.gd" id="1_v0xt3"]
 [ext_resource type="PackedScene" uid="uid://bix03ydg8qdqn" path="res://scenes/singletons/seeds_generator/seeds_generator.tscn" id="2_42ul1"]
 [ext_resource type="PackedScene" uid="uid://cd0mnw4rglpm2" path="res://scenes/farm_scene/farm_scene.tscn" id="2_dunq3"]
-[ext_resource type="PackedScene" uid="uid://cg47ap2w34rkh" path="res://scenes/singletons/water_generator/water_generator.tscn" id="3_rcnbx"]
+[ext_resource type="Script" uid="uid://dvvwe202ka8pw" path="res://scenes/singletons/interface/interface.gd" id="3_dos5a"]
+[ext_resource type="PackedScene" uid="uid://s2ywpxkoi46r" path="res://scenes/main_scene/main_scene.tscn" id="4_rcnbx"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_v0xt3")
@@ -13,18 +14,46 @@ autostart = true
 
 [node name="SeedsGenerator" parent="." instance=ExtResource("2_42ul1")]
 
-[node name="WaterGenerator" parent="." instance=ExtResource("3_rcnbx")]
-
-[node name="TabContainer" type="TabContainer" parent="."]
+[node name="Interface" type="Control" parent="."]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_dos5a")
+
+[node name="MarginContainer" type="MarginContainer" parent="Interface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Interface/MarginContainer"]
+layout_mode = 2
+
+[node name="LeftPanel" type="Control" parent="Interface/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="Interface/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
 current_tab = 0
 
-[node name="FarmScene" parent="TabContainer" instance=ExtResource("2_dunq3")]
+[node name="FarmScene" parent="Interface/MarginContainer/HBoxContainer/TabContainer" instance=ExtResource("2_dunq3")]
 layout_mode = 2
 metadata/_tab_index = 0
+
+[node name="MainScene" parent="Interface/MarginContainer/HBoxContainer/TabContainer" instance=ExtResource("4_rcnbx")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="RightPanel" type="Control" parent="Interface/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
