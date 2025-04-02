@@ -35,12 +35,14 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="LeftPanel" type="Control" parent="Interface/MarginContainer/HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
 [node name="TabContainer" type="TabContainer" parent="Interface/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+tab_alignment = 1
 current_tab = 0
 
 [node name="FarmScene" parent="Interface/MarginContainer/HBoxContainer/TabContainer" instance=ExtResource("2_dunq3")]

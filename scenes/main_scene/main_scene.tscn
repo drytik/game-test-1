@@ -29,7 +29,6 @@ render_target_update_mode = 4
 
 [node name="World" type="Node2D" parent="SubViewportContainer/SubViewport"]
 position = Vector2(6.10352e-05, 3.05176e-05)
-scale = Vector2(1, 1)
 
 [node name="Icon2" type="Sprite2D" parent="SubViewportContainer/SubViewport/World"]
 position = Vector2(878, 319)
@@ -37,7 +36,7 @@ scale = Vector2(2.84524, 2.29754)
 texture = ExtResource("1_6iw8k")
 
 [node name="Icon" type="Sprite2D" parent="SubViewportContainer/SubViewport/World"]
-position = Vector2(266, 319)
+position = Vector2(32.9999, 45)
 rotation = 3.14159
 scale = Vector2(2.84524, 2.29754)
 texture = ExtResource("1_6iw8k")

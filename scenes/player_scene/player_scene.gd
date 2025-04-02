@@ -6,15 +6,7 @@ var speed : float = 300.0
 
 func _ready() -> void:
 	camera.make_current()
-	camera.position_smoothing_enabled = false
-	camera.position_smoothing_speed = 10.0
-	camera.zoom = Vector2(2, 2)
-	
-	var viewport : Viewport = get_viewport()
-	camera.limit_left = 0
-	camera.limit_right = viewport.size.x
-	camera.limit_top = 0
-	camera.limit_bottom = viewport.size.y
+	camera.zoom = Vector2(1, 1)
 	
 func _process(delta: float) -> void:
 	var direction : Vector2 = Input.get_vector("left", "right", "up", "down")
