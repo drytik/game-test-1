@@ -5,7 +5,7 @@ extends Control
 @onready var svcontainer : SubViewportContainer = $SubViewportContainer
 
 func _ready() -> void:
-	subviewport.size = Vector2 (744, 617)
+	#subviewport.size = Vector2 (744, 617)
 	svcontainer.anchor_right = 1.0
 	svcontainer.anchor_bottom = 1.0
 	svcontainer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
