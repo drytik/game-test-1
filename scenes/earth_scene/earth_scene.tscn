@@ -1,0 +1,371 @@
+[gd_scene format=3 uid="uid://dg8fmcdarfnh5"]
+
+[node name="EarthScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer"]
+layout_mode = 2
+current_tab = 0
+
+[node name="CityMenu" type="HBoxContainer" parent="MarginContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="TradePanel" type="Control" parent="MarginContainer/TabContainer/CityMenu"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/TabContainer/CityMenu/TradePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.564706, 0.564706, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "MARKET"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="Label" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Material"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="Label" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Buy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="Label" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Sell"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="Label" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Quantity"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Seeds
+"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "<value>"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+text = "<value>"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="Label" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "<value>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Silver
+"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "<value>"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+text = "<value>
+"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+text = "<value>
+"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer5" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Copper"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "<value>"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+text = "<value>
+"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+text = "<value>
+"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer6" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Fuel
+"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "<value>"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+text = "<value>
+"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginContainer4"]
+layout_mode = 2
+text = "<value>
+"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ShipyardPanel" type="Control" parent="MarginContainer/TabContainer/CityMenu"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/TabContainer/CityMenu/ShipyardPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0.15, 1)
+
+[node name="IndustryPanel" type="Control" parent="MarginContainer/TabContainer/CityMenu"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/TabContainer/CityMenu/IndustryPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0, 1)
+
+[node name="PoliticPanel" type="Control" parent="MarginContainer/TabContainer/CityMenu"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/TabContainer/CityMenu/PoliticPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.847101, 0.432385, 0, 1)
