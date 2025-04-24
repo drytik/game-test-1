@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dg8fmcdarfnh5"]
+[gd_scene load_steps=2 format=3 uid="uid://dg8fmcdarfnh5"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wxvwg"]
 
 [node name="EarthScene" type="Control"]
 layout_mode = 3
@@ -24,11 +26,24 @@ current_tab = 0
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="TradePanel" type="Control" parent="MarginContainer/TabContainer/CityMenu"]
+[node name="MarketPanel" type="Control" parent="MarginContainer/TabContainer/CityMenu"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/TabContainer/CityMenu/TradePanel"]
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Control" type="Control" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,305 +52,262 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.564706, 0.564706, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel"]
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer"]
-layout_mode = 2
-text = "MARKET"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+[node name="MatName" type="VBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
 
-[node name="RichTextLabel" type="Label" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer"]
+[node name="Iron" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName"]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="TextureRect" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Iron"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("PlaceholderTexture2D_wxvwg")
+
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Iron"]
+layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "Material"
-horizontal_alignment = 1
+text = "IRON"
 vertical_alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+[node name="Quartz" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="TextureRect" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Quartz"]
 layout_mode = 2
 size_flags_horizontal = 3
+texture = SubResource("PlaceholderTexture2D_wxvwg")
 
-[node name="RichTextLabel" type="Label" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer2"]
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Quartz"]
 layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "Buy"
-horizontal_alignment = 1
+text = "QUA"
 vertical_alignment = 1
 
-[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+[node name="Hidrogen" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="TextureRect" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Hidrogen"]
 layout_mode = 2
 size_flags_horizontal = 3
+texture = SubResource("PlaceholderTexture2D_wxvwg")
 
-[node name="RichTextLabel" type="Label" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer3"]
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Hidrogen"]
 layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "Sell"
-horizontal_alignment = 1
+text = "HIDR"
 vertical_alignment = 1
 
-[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer"]
+[node name="Water" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="TextureRect" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Water"]
 layout_mode = 2
 size_flags_horizontal = 3
+texture = SubResource("PlaceholderTexture2D_wxvwg")
 
-[node name="RichTextLabel" type="Label" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer4"]
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Water"]
 layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "Quantity"
-horizontal_alignment = 1
+text = "WATE"
 vertical_alignment = 1
 
-[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Seeds" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+[node name="Label" type="TextureRect" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Seeds"]
 layout_mode = 2
 size_flags_horizontal = 3
+texture = SubResource("PlaceholderTexture2D_wxvwg")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginContainer"]
-layout_mode = 2
-text = "Seeds
-"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Seeds"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginContainer2"]
-layout_mode = 2
-text = "<value>"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginContainer3"]
-layout_mode = 2
-text = "<value>"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="Label" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/MarginContainer4"]
-layout_mode = 2
 size_flags_vertical = 1
+text = "SEED"
+vertical_alignment = 1
+
+[node name="Titanium" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="TextureRect" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Titanium"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("PlaceholderTexture2D_wxvwg")
+
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Titanium"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "TITA"
+vertical_alignment = 1
+
+[node name="Plasma" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="TextureRect" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Plasma"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("PlaceholderTexture2D_wxvwg")
+
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Plasma"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "PLAS"
+vertical_alignment = 1
+
+[node name="Food" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="TextureRect" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Food"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("PlaceholderTexture2D_wxvwg")
+
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Food"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "FOOD"
+vertical_alignment = 1
+
+[node name="Pharma" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="TextureRect" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Pharma"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("PlaceholderTexture2D_wxvwg")
+
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatName/Pharma"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "PHAR"
+vertical_alignment = 1
+
+[node name="MatPrice" type="VBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Iron" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatPrice"]
+layout_mode = 2
+size_flags_vertical = 3
 text = "<value>"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Quartz" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatPrice"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer"]
-layout_mode = 2
-text = "Silver
-"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer2"]
-layout_mode = 2
 text = "<value>"
-fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer3"]
-layout_mode = 2
-text = "<value>
-"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer4/HBoxContainer/MarginContainer4"]
-layout_mode = 2
-text = "<value>
-"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer5" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Hidrogen" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatPrice"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginContainer"]
-layout_mode = 2
-text = "Copper"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginContainer2"]
-layout_mode = 2
 text = "<value>"
-fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginContainer3"]
-layout_mode = 2
-text = "<value>
-"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer5/HBoxContainer/MarginContainer4"]
-layout_mode = 2
-text = "<value>
-"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer6" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Water" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatPrice"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginContainer"]
-layout_mode = 2
-text = "Fuel
-"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginContainer2"]
-layout_mode = 2
 text = "<value>"
-fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginContainer3"]
-layout_mode = 2
-text = "<value>
-"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer6/HBoxContainer/MarginContainer4"]
-layout_mode = 2
-text = "<value>
-"
-fit_content = true
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/TabContainer/CityMenu/TradePanel/VBoxContainer"]
+[node name="Seeds" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatPrice"]
 layout_mode = 2
 size_flags_vertical = 3
+text = "<value>"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="ShipyardPanel" type="Control" parent="MarginContainer/TabContainer/CityMenu"]
+[node name="Titanium" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatPrice"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "<value>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Plasma" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatPrice"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "<value>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Food" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatPrice"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "<value>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pharma" type="Label" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatPrice"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "<value>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MatTend" type="VBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="MatStock" type="VBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="MatActions" type="VBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Golds" type="HBoxContainer" parent="MarginContainer/TabContainer/CityMenu/MarketPanel/TabContainer/Control/GridContainer/MatActions"]
+layout_mode = 2
+
+[node name="ProductionPanel" type="Control" parent="MarginContainer/TabContainer/CityMenu"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/TabContainer/CityMenu/ShipyardPanel"]
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/TabContainer/CityMenu/ProductionPanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -344,11 +316,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 1, 0.15, 1)
 
-[node name="IndustryPanel" type="Control" parent="MarginContainer/TabContainer/CityMenu"]
+[node name="ShipyardPanel" type="Control" parent="MarginContainer/TabContainer/CityMenu"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/TabContainer/CityMenu/IndustryPanel"]
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/TabContainer/CityMenu/ShipyardPanel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
